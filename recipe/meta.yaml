@@ -1,5 +1,5 @@
 {% set name = "bayesianbandits" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bayesianbandits-{{ version }}.tar.gz
-  sha256: 515256598f86dbec0f67b593599e5a9d2bb1132e85ca731b541d75cc35ded33c
+  sha256: f19a9a1f8d98bcdbf7568034e0fcbd881be0647633a364f09da9103402f2d1af
 
 build:
   noarch: python
