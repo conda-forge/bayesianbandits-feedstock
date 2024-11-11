@@ -1,13 +1,14 @@
 {% set name = "bayesianbandits" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bayesianbandits-{{ version }}.tar.gz
-  sha256: 515256598f86dbec0f67b593599e5a9d2bb1132e85ca731b541d75cc35ded33c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bayesianbandits-{{ version }}.tar.gz
+  sha256: f19a9a1f8d98bcdbf7568034e0fcbd881be0647633a364f09da9103402f2d1af
 
 build:
   noarch: python
@@ -16,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<3.13
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.9.0,<4.0.0,<3.13
+    - python >={{ python_min }}
     - scipy >=1.11.0
     - scikit-learn >=1.2.0
     - attrs >=21.2.0
@@ -33,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/bayesianbandits/bayesianbandits
