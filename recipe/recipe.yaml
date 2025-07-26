@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: bayesianbandits
-  version: 1.1.0
-  python_min: 3.10
+  version: "1.1.2"
+  python_min: '3.10'
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bayesianbandits-${{ version }}.tar.gz
-  sha256: db33d4ef3247fdda7658f76198b154ddc3c20892d395807715d962104970c13f
+  sha256: 2cfeaba4cd5f20c9f22e57b911507f354f6d29f07f4c78ad9ca95f8e11fa44da
 
 build:
   number: 0
