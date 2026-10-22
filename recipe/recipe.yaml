@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: bayesianbandits
-  version: "1.4.0"
+  version: "1.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bayesianbandits-${{ version }}.tar.gz
-  sha256: 99883725684a4f20cca16263082e017c9d69742f17474b20e9dce4dcabb09c41
+  sha256: 2335c3ad29bc6566aa986626d67a029a1f2b83861b5a5fd8b0f48c8f8a6d9596
 
 build:
-  number: 2
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
